@@ -1,0 +1,18 @@
+- name: Crear tres archivos en la VM de Azure
+  hosts: azure_vms
+  become: yes
+  tasks:
+    - name: Crear archivo 1
+      file:
+        path: /home/<USUARIO>/archivo1.txt
+        state: touch
+
+    - name: Crear archivo 2
+      file:
+        path: /home/<USUARIO>/archivo2.txt
+        state: touch
+
+    - name: Crear archivo 3
+      file:
+        path: /home/<USUARIO>/archivo3.txt
+        state: touch
